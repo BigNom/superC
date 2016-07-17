@@ -1,7 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
 import packageJSON from '../../../package.json';
-import { SuperCellIcon, HappyFaceIcon } from './icons';
 import StatelessComponent from './statelessComponentExample';
 import { Link } from 'react-router';
 
@@ -25,12 +24,33 @@ class AppIndex extends Component {
 
       <div className="row">
         <div className='card' style={style.card}>
-          <h1 className='logo'>ReactiveWebDesigns <SuperCellIcon /> version {version}</h1>
+          <h1 className='logo'>Reactive Web Designs</h1>
         <p>Hello, this is a <strong>ES6 React Class Component! </strong>
-        <HappyFaceIcon /></p>
+        </p>
         </div>
       </div>
 
+      <div className="row">
+        <div className='card' style={style.card}>
+          <p>I use <strong>flexbox</strong> for my layouts!
+          </p>
+          <p>Check out the <Link to={'/style-guide'}><strong>StyleGuide</strong></Link></p>
+          <p>Check out the <Link to={'/contact'}><strong>Contact</strong></Link></p>
+        </div>
+
+        <div className='card' style={style.card}>
+          <p>Links that don't match up with a URL defined in the router
+          will be handled by the noMatch component.<br />
+          <Link to={'/some-random-link'}><strong>Example not found link</strong></Link></p>
+        </div>
+
+        <div className='card' style={style.card}>
+          <StatelessComponent phrase='React Stateless Component' />
+        </div>
+        <div className='card' style={style.card}>
+          <StatelessComponent phrase='BigNom Component' />
+        </div>
+      </div>
       <div className="row">
         <div className='card' style={style.card}>
           <p>I use <strong>flexbox</strong> for my layouts!
@@ -46,33 +66,11 @@ class AppIndex extends Component {
 
         <div className='card' style={style.card}>
           <StatelessComponent phrase='React Stateless Component' />
-          <SuperCellIcon />
+
         </div>
         <div className='card' style={style.card}>
           <StatelessComponent phrase='BigNom Component' />
-          <SuperCellIcon />
-        </div>
-      </div>
-      <div className="row">
-        <div className='card' style={style.card}>
-          <p>I use <strong>flexbox</strong> for my layouts!
-          </p>
-          <p>Check out the <Link to={'/style-guide'}><strong>StyleGuide</strong></Link></p>
-        </div>
 
-        <div className='card' style={style.card}>
-          <p>Links that don't match up with a URL defined in the router
-          will be handled by the noMatch component.<br />
-          <Link to={'/some-random-link'}><strong>Example not found link</strong></Link></p>
-        </div>
-
-        <div className='card' style={style.card}>
-          <StatelessComponent phrase='React Stateless Component' />
-          <SuperCellIcon />
-        </div>
-        <div className='card' style={style.card}>
-          <StatelessComponent phrase='BigNom Component' />
-          <SuperCellIcon />
         </div>
       </div>
 
