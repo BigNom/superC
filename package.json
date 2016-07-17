@@ -2,9 +2,11 @@
   "name": "superCell",
   "version": "1.0.8",
   "description": "Build system for node, express and react apps",
-  "main": "node server.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "NODE_ENV=development gulp",
+    "production": "NODE_ENV=production gulp"
   },
   "engines": {
     "node": "5.11.0"
